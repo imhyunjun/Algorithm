@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BFS\단지번호붙이기.cpp">
+    <ClCompile Include="BFS\유기농배추.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
