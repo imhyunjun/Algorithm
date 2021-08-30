@@ -22,10 +22,9 @@ void BFS()
 {
 	while (!q.empty())
 	{
+
 		int x = q.front().first;
 		int y = q.front().second;
-
-		visited[x][y] = 1;
 
 		q.pop();
 		cnt++;
@@ -35,15 +34,13 @@ void BFS()
 			int nx = x + dx[i];
 			int ny = y + dy[i];
 
-			int curr = graph[x][y];
 
-			if (nx >= 0 && nx < M && ny >= 0 && ny < N)
+			if (nx >= 0 && nx < N && ny >= 0 && ny < M)
 			{
-				if (visited[nx][ny] == 0 && graph[nx][ny] == 0)
+				if (graph[nx][ny] == 0)
 				{
-					visited[nx][ny] = 1;
-					graph[nx][ny] = curr + 1;
-					day = curr + 1;
+					graph[nx][ny] = graph[x][y] + 1;
+					day = graph[x][y] + 1;
 					q.push(make_pair(nx, ny));
 				}
 			}
@@ -75,37 +72,16 @@ int main()
 
 	BFS();
 
-	printf("%d\n", cnt);
-	printf("%d\n", day);
-	printf("%d\n", vacant);
-
 	int temp = vacant + cnt;
 
 	if (temp < M * N) printf("%d\n", -1);		//0인게 존재
 
 	else if (temp == M * N)
 	{
-		printf("%d\n", day);
-	}
-
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < M; j++)
-		{
-			printf("%d ", graph[i][j]);
-		}
-
-		printf("\n");
-	}
-
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < M; j++)
-		{
-			printf("%d ", visited[i][j]);
-		}
-
-		printf("\n");
+		if(day > 0)
+			printf("%d\n", day - 1);
+		else
+			printf("%d\n", day);
 	}
 
 	return 0;
