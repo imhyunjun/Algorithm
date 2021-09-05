@@ -95,7 +95,28 @@ static void PostOder(node* start)
 //level order traversal - 레벨 순서 순회
 static void LevelOrder(node* start)
 {
+	if (!start) return;
 
+	std::queue<node*> q;
+	q.push(start);
+
+	while (!q.empty())
+	{
+		int size = q.size();
+		for (int i = 0; i < size; i++)
+		{
+			auto current = q.front();
+			q.pop();
+
+			std::cout << current->position << ", ";
+			if (current->first)
+				q.push(current->first);
+			if (current->second)
+				q.push(current->second);
+		}
+
+		std::cout << std::endl;
+	}
 }
 
 int main()
@@ -106,4 +127,6 @@ int main()
 	tree.AddSub("부사장", "IT부장");
 	tree.AddSub("부사장", "마케팅부장");
 	tree.AddSub("부사장", "앱개발팀장");
+
+	LevelOrder(tree.root);
 }
