@@ -17,11 +17,18 @@ struct BST
 		return Find_Imp(root, _v);
 	}
 
+public:
 	void Insert(int _v)
 	{
 		if (root == NULL)
 		{
 			root = new Node{ _v, NULL, NULL };
+			cout << "root is null" << endl;
+		}
+		else
+		{
+			cout << "root isn't null" << endl;
+			Insert_Imp(root, _v);
 		}
 	}
 
@@ -43,7 +50,7 @@ struct BST
 
 	void DeleteValue(int _v)
 	{
-		
+		root = Delete_Imp(root, _v);
 	}
 
 private:
@@ -72,7 +79,9 @@ private:
 		if (_v < _curr->data)
 		{
 			if (_curr->left == NULL)
-				_curr->left == new Node{ _v, NULL, NULL };
+			{
+				_curr->left = new Node{ _v, NULL, NULL };
+			}
 			else
 				Insert_Imp(_curr->left, _v);
 		}
@@ -138,3 +147,37 @@ private:
 		return _s;
 	}
 };
+
+int main()
+{
+	BST tree;
+
+	tree.Insert(12);
+	tree.Insert(10);
+
+	if (tree.Find(10))
+		cout << "2가 있습니다. " << endl;
+
+	tree.Insert(20);
+	tree.Insert(8);
+	tree.Insert(11);
+	tree.Insert(15);
+	tree.Insert(28);
+	tree.Insert(4);
+	tree.Insert(2);
+
+	tree.InOrder();	//BST( 이진 검색 트리에서 중위순회를 하면 오름차순 )
+
+	cout << endl;
+
+	cout << endl;
+
+	tree.DeleteValue(12);
+
+	if (!tree.Find(12))
+		cout << "12가 없습니다. " << endl;
+
+
+
+	return 0;
+}
