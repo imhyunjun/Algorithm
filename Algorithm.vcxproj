@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Hash\1620나는야포켓몬마스터이다솜.cpp" />
+    <ClCompile Include="Math\1016제곱ㄴㄴ수.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
