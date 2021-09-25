@@ -5,37 +5,36 @@ bool divide[1000001];
 
 int main()
 {
-	int m, M;
+	long long m, M;
 	int cnt = 0;
 	cin >> m >> M;
 
-	for (int i = 2; i * i <= M; i++) 
+	for (long long i = 2; i * i <= M; i++) 
 	{
-		int sqr = i * i;
-		int q = m / sqr;
-		int r = m % sqr;
-		int start = 0;
+		long long sqr = i * i;
+		long long q = m / sqr;
+		long long r = m % sqr;
 
 		if (r != 0)
 		{
-			start = (q + 1) * sqr;
+			q++;
 		}
-		else
-			start = m;
 
-		for (int j = 0; start + sqr * j <= M; j++)
+		while (q * sqr <= M)
 		{
-			if (!divide[sqr * j])
-			{
-				cout << sqr * j << "\n";
-				divide[sqr * j] = true;
-				cnt++;
-			}
+			long long temp = q * sqr - m;
+			divide[temp] = true;
+			q++;
 		}
 		
 	}
 
-	cout << M - m + 1 - cnt;
+	for (int i = 0; i <= M - m; i++)
+	{
+		if (!divide[i]) cnt++;
+	}
+
+	cout << cnt << "\n";
 
 	return 0;
 }
