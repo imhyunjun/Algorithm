@@ -2,34 +2,45 @@
 using namespace std;
 
 int cnt = 0;
-int newN = 0;
 
-void Cycle(int _n)
+int Cycle(int _n)
 {
-	if (_n < 10)
+	/*if (_n < 10)
 	{
 		_n = _n * 10;
-	}
+	}*/
 
 	int q = _n / 10;
 	int r = _n % 10;
 
 	int temp = q + r;
-	newN = r * 10 + temp % 10;
-	cnt++;
+	int newN = r * 10 + temp % 10;
+	cout << newN << endl;
+	
+	return newN;
 }
 
 
 int main()
 {
-	int N;
-	cin >> N;
-
-	while (N != newN)
+	while (true)
 	{
-		Cycle(N);
+		int N;
+		cin >> N;
+
+		int oldN = N;
+
+		while (true)
+		{
+			int newN = Cycle(oldN);
+			cnt++;
+
+			if (newN == N) break;
+
+			oldN = newN;
+		}
+		cout << cnt << endl;
 	}
-	cout << cnt;
 
 	return 0;
 }
