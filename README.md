@@ -3,11 +3,12 @@
 - std::vector
 - std::forward_list
 - std::list
-- ÀÌÁø °Ë»ö Æ®¸® (BST) - °Ë»ö ¹× »ðÀÔ : O(logN)
-- Èü(Heap) - ÃÖ´ë ¿ø¼Ò Á¢±Ù : O(1), ¿ø¼Ò »ðÀÔO(logN), ÃÖ´ë ¿ø¼Ò »èÁ¦ : O(logN); -> ¿ÏÀü ÀÌÁø Æ®¸® »ç¿ë
-		   - Èü ÃÊ±âÈ­ : Èü »ý¼º ¾Ë°í¸®Áò »ç¿ë -> O(N)
-- ¼±Çü °Ë»ö : O(N)
-- Äü Á¤·Ä : O(NlogN)
+- ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ Æ®ï¿½ï¿½ (BST) - ï¿½Ë»ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : O(logN)
+- ï¿½ï¿½(Heap) - ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : O(1), ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½O(logN), ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : O(logN); -> ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½
+		   - ï¿½ï¿½ ï¿½Ê±ï¿½È­ : ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ -> O(N)
+- ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ : O(N)
+- ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : O(NlogN)
+- ì„ í˜• ì‹œê°„ íƒìƒ‰ : O(N)
 
-#¾Ë¾Æ º¼ °Í
+#ï¿½Ë¾ï¿½ ï¿½ï¿½ ï¿½ï¿½
 - AVL tree, Red-Black tree
