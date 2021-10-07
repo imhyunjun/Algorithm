@@ -1,10 +1,2 @@
-﻿  DNC2.cpp
-D:\workspace\C++\Algorithm\DivideNConquer\DNC2.cpp(51,3): error C3779: 'Quick_Sort': 'auto'을(를) 반환하는 함수를 정의되기 전에 사용할 수 없습니다.
-D:\workspace\C++\Algorithm\DivideNConquer\DNC2.cpp(45): message : 'Quick_Sort' 선언을 참조하십시오.
-D:\workspace\C++\Algorithm\DivideNConquer\DNC2.cpp(69): message : 컴파일되는 함수 템플릿 인스턴스화 'auto Quick_Sort<int>(std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>)'에 대한 참조를 확인하세요.
-          with
-          [
-              _Ty=int
-          ]
-D:\workspace\C++\Algorithm\DivideNConquer\DNC2.cpp(53,3): error C3779: 'Quick_Sort': 'auto'을(를) 반환하는 함수를 정의되기 전에 사용할 수 없습니다.
-D:\workspace\C++\Algorithm\DivideNConquer\DNC2.cpp(45): message : 'Quick_Sort' 선언을 참조하십시오.
+﻿  1931 회의실배정.cpp
+  Algorithm.vcxproj -> C:\Users\limhy\workspace\c++\Algorithm\x64\Debug\Algorithm.exe
