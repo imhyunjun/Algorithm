@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Math\1011 FlyMeToTheAlphaCentauri.cpp" />
     <ClCompile Include="MST\1197 최소스패닝트리.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

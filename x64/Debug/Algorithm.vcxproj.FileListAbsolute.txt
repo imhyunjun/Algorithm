@@ -1,2 +1,1 @@
 C:\Users\limhy\workspace\c++\Algorithm\x64\Debug\Algorithm.exe
-D:\workspace\C++\Algorithm\x64\Debug\Algorithm.exe

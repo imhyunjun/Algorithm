@@ -1,2 +1,4 @@
-﻿  1197 최소스패닝트리.cpp
-  Algorithm.vcxproj -> C:\Users\limhy\workspace\c++\Algorithm\x64\Debug\Algorithm.exe
+﻿  1011 FlyMeToTheAlphaCentauri.cpp
+  1197 최소스패닝트리.cpp
+c1xx : fatal error C1083: 소스 파일을 열 수 없습니다. 'MST\1197 최소스패닝트리.cpp': No such file or directory
+  코드를 생성하고 있습니다...

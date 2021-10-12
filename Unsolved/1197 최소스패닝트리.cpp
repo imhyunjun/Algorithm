@@ -58,7 +58,6 @@ public:
 		nodes.emplace_back(_x);
 	}
 
-	//��Ʈ�� ã�� ��
 	int Find(int _x)
 	{
 		auto node = find_if(nodes.begin(), nodes.end(), [_x](auto n) {return n.id == _x; });
