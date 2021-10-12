@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -11,35 +12,20 @@ int main()
 	for (int i = 0; i < T; i++)
 	{
 		cin >> x >> y;
+
 		int length = y - x;
-		int cnt = 0;
-		int j = 1;
+		int j = floor(sqrt(length));
 
-		while (length > 0)
+		int sqr = j * j;
+		int term = length - sqr;
+		int cnt = 2 * j - 1;
+
+		if (term != 0)
 		{
-			if (length == j)
-			{
-				cnt++;
-				length -= j;
-			}
-			else if (2 * (j - 1) <= length && length <= 2 * j)
-			{
-				cnt += 2;
-				length = 0;
-			}
-			else if(length > 2 * j)
-			{
-				cnt += 2;
-				length -= 2 * j;				
-			}
-			else
-			{
-				length += 2 * (j + 1);
-				cnt -= 2;
-				j -= 3;
-			}
+			term--;
+			int quotient = term / j;
 
-			j++;
+			cnt += quotient + 1;
 		}
 
 		cout << cnt << "\n";

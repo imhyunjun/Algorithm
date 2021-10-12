@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MST\1197 최소스패닝트리.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Math\1011 FlyMeToTheAlphaCentauri.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>

@@ -19,8 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Math\1011 FlyMeToTheAlphaCentauri.cpp" />
-    <ClCompile Include="MST\1197 최소스패닝트리.cpp" />
+    <ClCompile Include="Math\1011 FlyMeToTheAlphaCentauri.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
