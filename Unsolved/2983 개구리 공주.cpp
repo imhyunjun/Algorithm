@@ -3,11 +3,13 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
+#include <set>
 
 using namespace std;
 
 list<vector<int>> pos;
 vector<vector<int>> sorting;
+set<vector<int>> s;
 list<vector<int>>::iterator it;
 list<vector<int>>::iterator curr_it;
 
@@ -56,8 +58,13 @@ int main()
 		if (r == (x + y) % 2)
 		{
 			vector<int> temp = { x, y };
-			sorting.push_back(temp);
+			s.insert(temp);
 		}
+	}
+
+	for (auto d : s)
+	{
+		sorting.push_back(d);
 	}
 
 	sort(sorting.begin(), sorting.end(), Comp);
