@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Temp\2042 구간합구하기.cpp">
+    <ClCompile Include="String\5430 AC.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
