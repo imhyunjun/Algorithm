@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MST",
+    "\\Queue",
+    "\\String",
+    "\\Temp"
   ],
+  "SelectedNode": "\\Algorithm.sln",
   "PreviewInSolutionExplorer": false
 }
