@@ -1,2 +1,3 @@
-﻿  9095 1,2,3더하기.cpp
+﻿  12865 평범한배낭.cpp
+D:\workspace\C++\Algorithm\Temp\12865 평범한배낭.cpp(19,9): warning C4101: 'K' :참조되지 않은 지역 변수입니다.
   Algorithm.vcxproj -> D:\workspace\C++\Algorithm\x64\Debug\Algorithm.exe
