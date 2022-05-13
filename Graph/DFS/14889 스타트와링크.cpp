@@ -5,39 +5,48 @@ using namespace std;
 int N;
 
 int a[20][20];
-int v[20][20];
-int total = 0;
+int v[20];
 int minV = 500;
-int sum = 0;
+int sum1 = 0;
+int sum2 = 0;
 
-void DFS(int _n)
+void DFS(int _n, int _p)
 {
-	if (_n == N / 2)
+	if (_n == (N / 2))
 	{
-		int l = total - sum;
-		if (abs(sum - l) < minV)
+		sum1 = 0;
+		sum2 = 0;
+
+		for (int i = 0; i < N; i++)
 		{
-			minV = abs(sum - l);
+			for (int j = i + 1; j < N; j++)
+			{
+
+				if (v[i] && v[j])
+				{
+					sum1 += a[i][j];
+					sum1 += a[j][i];
+				}
+				else if (!v[i] && !v[j])
+				{
+					sum2 += a[i][j];
+					sum2 += a[j][i];
+				}
+			}
+		}
+		
+		if (abs(sum1 - sum2) < minV)
+		{
+			minV = abs(sum1 - sum2);
 		}
 	}
 	else
 	{
-		for (int i = 0; i < N; i++)
+		for (int i = _p; i < N; i++)
 		{
-			for (int j = 0; j < N; j++)
-			{
-				if (!v[i][j])
-				{
-					v[i][j] = true;
-					v[j][i] = true;
-					sum = sum + (a[i][j] + a[j][i]);
-					DFS(_n + 1);
-					sum = sum - (a[i][j] + a[j][i]);
-					v[i][j] = false;
-					v[j][i] = false;
-
-				}
-			}
+			v[i] = 1;
+			DFS(_n + 1, i);
+			v[i] = 0;
 		}
 	}
 }
@@ -51,11 +60,10 @@ int main()
 		for (int j = 0; j < N; j++)
 		{
 			cin >> a[i][j];
-			total += a[i][j];
 		}
 	}
 
-	DFS(0);
+	DFS(0, 0);
 
 	cout << minV;
 
