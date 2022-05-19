@@ -11,6 +11,9 @@
 - 디스조인트셋을 사용하는 크루스칼 : O(Ea(V)) ( a : 알파 -> 아커만 함수의 역함수 로그함수보다 느리게 증가)
 - 포드-풀커슨 알고리즘 : O((V + E)F) V : vertex, E: edge, F : maxFlow (DFS)
 - 에드먼드 카프 알고리즘 : O(V * E^2) (BFS)
+- Minimum Vertex Cover -> 이분 그래프로 해결 가능( 쾨닉의 정리)
+- Minimum Vertex Cut -> Minimum Vertex Cover을 구할 수 있다.
+- 네트워크 플로우에서 최소 컷 = max flow
 
 #더 알아 볼 것
 - AVL tree, Red-Black tree
