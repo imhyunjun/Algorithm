@@ -14,9 +14,12 @@
 - Minimum Vertex Cover -> 이분 그래프로 해결 가능( 쾨닉의 정리)
 - Minimum Vertex Cut -> Minimum Vertex Cover을 구할 수 있다.
 - 네트워크 플로우에서 최소 컷 = max flow
+- 이분 매칭 : X집합에서 Y집합으로 가는 최대 용량 구하기(각 간선의 용량은 1) O(VE) (DFS)
 
 #더 알아 볼 것
 - AVL tree, Red-Black tree
 - 다익스트라 최단 경로 알고리즘
 - 크루스칼 최소 신장 트리 알고리즘 - 증명(최적부분구조, 그리디 선택)
 - 디스조인트 셋( 유니온 파인드 ), 포레스트
+- 디닉 알고리즘 : O((V^2)*E)
+- 호프 크로프트 카프 알고리즘
