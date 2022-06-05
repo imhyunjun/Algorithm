@@ -7,7 +7,7 @@ using namespace std;
 int N, K;
 int minV;
 int c;
-vector<bool> visited;
+bool visited[100001];
 
 vector<int> FindNext1(int _n)
 {
@@ -73,19 +73,40 @@ void Find()
 	}
 }
 
+void Soln(int _n, int _k)
+{
+	//cin >> N >> K;
+	N = _n;
+	K = _k;
+
+	minV = abs(K - N) + 1;
+	memset(visited, 0, sizeof(visited));
+	Find();
+
+	cout << "min value : " << minV << "\n" << "°³¼ö : " << c << "\n";
+}
+
 int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	cin >> N >> K;
-	minV = abs(K - N) + 1;
-	visited.resize(2 * K + 1);
+	int i, j;
+	cin >> i >> j;
+	cin.clear();
 
-	Find();
+	Soln(i, j);
 
-	cout << minV << "\n";
-	cout << c;
+	/*for (int i = 0; i < 100000; i++)
+	{
+		for (int j = 0; j < 100000; j++)
+		{
+			Soln(i, j);
+			cout << "{i, j} : " << i << "," << j << "\n";
+		}
+	}*/
 
+	fflush(stdout);
+	cout << fflush;
 	return 0;
 }
