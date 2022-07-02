@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Graph\DFS\12851 숨바꼭질2.cpp">
+    <ClCompile Include="Temp\14890 경사로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
